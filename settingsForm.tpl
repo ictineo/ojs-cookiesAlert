@@ -1,13 +1,14 @@
 {**
- * plugins/generic/googleAnalytics/settingsForm.tpl
+ * plugins/generic/cookiesAlert/settingsForm.tpl
  *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
+ * Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
+ * Developed by Julià Mestieri (Journal Services -- http://journal-services.com)
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Google Analytics plugin settings
  *
+ * Cookies alert settings 
  *}
+
 {strip}
 {assign var="pageTitle" value="plugins.generic.cookiesAlert.manager.cookiesAlertSettings"}
 {include file="common/header.tpl"}

@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file plugins/generic/googleAnalytics/GoogleAnalyticsSettingsForm.inc.php
- *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * @class GoogleAnalyticsSettingsForm
- * @ingroup plugins_generic_googleAnalytics
- *
- * @brief Form for journal managers to modify Google Analytics plugin settings
- */
+* @file CookiesAlertPluginSettingsForm.inc.php
+*
+* Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
+* Developed by Julià Mestieri (Journal Services -- http://journal-services.com)
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @class CookiesPlugin
+* @ingroup plugins_generic_cookies
+*
+* @brief Cookies Alert form for journal managers to configure the cookies alert
+*/
 
 
 import('lib.pkp.classes.form.Form');
@@ -35,9 +35,6 @@ class CookiesAlertSettingsForm extends Form {
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		//$this->addCheck(new FormValidator($this, 'googleAnalyticsSiteId', 'required', 'plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired'));
-
-		//$this->addCheck(new FormValidator($this, 'trackingCode', 'required', 'plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired'));
 	}
 
 	/**
@@ -48,27 +45,23 @@ class CookiesAlertSettingsForm extends Form {
 		$plugin =& $this->plugin;
     $site =& Request::getSite();
     $locales = $site->getSupportedLocales();
+    // all aviable locales 
     $this->_data = array(
       'locales' => $locales
     );
-    $values = array();
+    // array to store button and text for each locale
     $this->_data['cookiesAlertText'] =  array();
     $this->_data['cookiesAlertButton'] =  array();
 
+    // values for each locale
     foreach($locales as $index => $locale) {
       $this->_data['cookiesAlertText'] +=  array($locale =>  $plugin->getSetting($journalId, 'cookiesAlertText' . $locale));
       $this->_data['cookiesAlertButton'] +=  array($locale => $plugin->getSetting($journalId, 'cookiesAlertButton' . $locale));
     }
+    // some style options for every locale
     $this->_data['cookiesAlertStyleBd'] = $plugin->getSetting($journalId, 'cookiesAlertStyleBd');
     $this->_data['cookiesAlertStyleBgwrapper'] = $plugin->getSetting($journalId, 'cookiesAlertStyleBgwrapper');
     $this->_data['cookiesAlertStyleBgbutton'] = $plugin->getSetting($journalId, 'cookiesAlertStyleBgbutton');
-    //print($plugin->getSetting($journalId, 'cookiesAlertButton'));
-    //var_dump($this->_data);
-
-		//$this->_data = array(
-			//'googleAnalyticsSiteId' => $plugin->getSetting($journalId, 'googleAnalyticsSiteId'),
-			//'trackingCode' => $plugin->getSetting($journalId, 'trackingCode')
-		//);
 	}
 
 	/**

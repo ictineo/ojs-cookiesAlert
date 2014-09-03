@@ -1,7 +1,7 @@
 <?php
 
 /**
-* @file CookiesPlugin.inc.php
+* @file CookiesAlertPlugin.inc.php
 *
 * Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
 * Developed by Julià Mestieri (Journal Services -- http://journal-services.com)
@@ -27,37 +27,12 @@ class CookiesAlertPlugin extends GenericPlugin {
 		$success = parent::register($category, $path);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
-			// Insert field into author submission page and metadata form
-			//HookRegistry::register('Templates::Author::Submit::Authors', array($this, 'metadataField'));
-			//HookRegistry::register('Templates::Submission::MetadataEdit::Authors', array($this, 'metadataField'));
-
-			// Hook for initData in two forms
-			//HookRegistry::register('metadataform::initdata', array($this, 'metadataInitData'));
-			//HookRegistry::register('authorsubmitstep3form::initdata', array($this, 'metadataInitData'));
-
-			// Hook for execute in two forms
-			//HookRegistry::register('Author::Form::Submit::AuthorSubmitStep3Form::Execute', array($this, 'metadataExecute'));
-			//HookRegistry::register('Submission::Form::MetadataForm::Execute', array($this, 'metadataExecute'));
-
-			// Add element for AuthorDAO for storage
-			//HookRegistry::register('authordao::getAdditionalFieldNames', array($this, 'authorSubmitGetFieldNames'));
-
-			// Insert Google Analytics page tag to common footer
+      // register main footer hooks
 			HookRegistry::register('Templates::Common::Footer::PageFooter', array($this, 'insertFooter'));
-
-			// Insert Google Analytics page tag to article footer
 			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'insertFooter'));
-
-			// Insert Google Analytics page tag to article interstitial footer
 			HookRegistry::register('Templates::Article::Interstitial::PageFooter', array($this, 'insertFooter'));
-
-			// Insert Google Analytics page tag to article pdf interstitial footer
 			HookRegistry::register('Templates::Article::PdfInterstitial::PageFooter', array($this, 'insertFooter'));
-
-			// Insert Google Analytics page tag to reading tools footer
 			HookRegistry::register('Templates::Rt::Footer::PageFooter', array($this, 'insertFooter'));
-
-			// Insert Google Analytics page tag to help footer
 			HookRegistry::register('Templates::Help::Footer::PageFooter', array($this, 'insertFooter'));
 		}
 		return $success;
@@ -104,7 +79,7 @@ class CookiesAlertPlugin extends GenericPlugin {
   }
 
 	/**
-	 * Insert Google Analytics page tag to footer
+	 * Hook callback function to insert footer note
 	 */
 	function insertFooter($hookName, $params) {
 		$smarty =& $params[1];
@@ -113,22 +88,24 @@ class CookiesAlertPlugin extends GenericPlugin {
     $sessionManager =& SessionManager::getManager();
     $session =& $sessionManager->getUserSession();
     $templateMgr =& TemplateManager::getManager();
-    //$templateMgr =& $params[0];
-    //$site = $templateMgr->request->getSite();
     $journal =& Request::getJournal();
     $journalId = $journal->getId();
     $currentLocale = AppLocale::getLocale();
+    /** variable assignations to template block.tpl **/
     $templateMgr->assign('cookiesAlertText', $this->getSetting($journalId, 'cookiesAlertText'.$currentLocale));
     $templateMgr->assign('cookiesAlertButton', $this->getSetting($journalId, 'cookiesAlertButton'.$currentLocale));
     $templateMgr->assign('cookiesAlertStyleBd', $this->getSetting($journalId, 'cookiesAlertStyleBd'));
     $templateMgr->assign('cookiesAlertStyleBgwrapper', $this->getSetting($journalId, 'cookiesAlertStyleBgwrapper'));
     $templateMgr->assign('cookiesAlertStyleBgbutton', $this->getSetting($journalId, 'cookiesAlertStyleBgbutton'));
 
+    /** register value if button is clicked **/
     $url_params = $templateMgr->request->getQueryArray();
     if(array_key_exists('acceptCookies', $url_params) ) {
       //$url_params['acceptCookies'] == 1) {
       $session->setSessionVar('cookiesAlertAccepted',$url_params['acceptCookies']);
     }
+
+    /** if not accepted display the block template **/
     if($session->getSessionVar('cookiesAlertAccepted') != 1){
       $templateMgr->display($this->getTemplatePath() . 'block.tpl');
     }
@@ -163,11 +140,9 @@ class CookiesAlertPlugin extends GenericPlugin {
             Request::redirect(null, 'manager', 'plugin');
             return false;
           } else {
-            //$this->setBreadCrumbs(true);
             $form->display();
           }
         } else {
-          //$this->setBreadCrumbs(true);
           $form->initData();
           $form->display();
         }
