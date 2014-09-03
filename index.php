@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @defgroup plugins_generic_googleAnalytics
+ * @defgroup plugins_generic_cookies
  */
- 
+
 /**
- * @file plugins/generic/googleAnalytics/index.php
- *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * @ingroup plugins_generic_googleAnalytics
- * @brief Wrapper for Google Analytics plugin.
- *
- */
+* @file plugins/generic/cookies/index.php
+*
+* Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
+* Developed by Julià Mestieri (Journal Services -- http://journal-services.com)
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @ingroup plugins_generic_cookies
+*
+* @brief Cookies plugin main file
+*/
 
 require_once('CookiesAlertPlugin.inc.php');
 

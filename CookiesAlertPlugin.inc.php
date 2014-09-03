@@ -1,17 +1,18 @@
 <?php
 
 /**
- * @file plugins/generic/cookiesAlert/CookiesAlertPlugin.inc.php
- *
- * Copyright (c) 2013-2014 Simon Fraser University Library
- * Copyright (c) 2003-2014 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * @class GoogleAnalyticsPlugin
- * @ingroup plugins_generic_googleAnalytics
- *
- * @brief Google Analytics plugin class
- */
+* @file CookiesPlugin.inc.php
+*
+* Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
+* Developed by Julià Mestieri (Journal Services -- http://journal-services.com)
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @class CookiesPlugin
+* @ingroup plugins_generic_cookies
+*
+* @brief Cookies plugin class
+*/
+
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 

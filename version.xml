@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
-
 <!--
-  * plugins/generic/googleAnalytics/version.xml
-  *
-  * Copyright (c) 2013-2014 Simon Fraser University Library
-  * Copyright (c) 2003-2014 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Plugin version information.
-  -->
+ * version.xml
+ *
+ * Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
+ * Developed by Julià Mestieri (Journal Services - http://journal-services.com)
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Plugin version information.
+ -->
 <version>
 	<application>cookiesAlert</application>
 	<type>plugins.generic</type>
