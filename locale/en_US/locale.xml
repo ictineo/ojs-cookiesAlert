@@ -16,19 +16,18 @@
 <locale name="en_US" full_name="U.S. English">
 
 	<!-- Google Analytics -->
-	<message key="plugins.generic.cookiesAlert.displayName"></message>
-	<message key="plugins.generic.cookiesAlert.description"><![CDATA[]]></message>
+	<message key="plugins.generic.cookiesAlert.displayName">Cookies Alert</message>
+	<message key="plugins.generic.cookiesAlert.description"><![CDATA[Cookies usage alert message, text and style customizable]]></message>
 
 	<!-- Google Analytics Settings Management -->
 	<message key="plugins.generic.cookiesAlert.manager.settings">Settings</message>
-	<message key="plugins.generic.cookiesAlert.manager.settings">Configuració</message>
-  <message key="plugins.generic.cookiesAlert.manager.cookiesAlertSettings"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.description"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.langBlockLocaleCaption"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertButton"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertText"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertTextInstructions"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBd"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgwrapper"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgbutton"></message>
+  <message key="plugins.generic.cookiesAlert.manager.cookiesAlertSettings">Cookies Alert settings page</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.description">Set the text to display in the alert and in the button to close. The text must be setted for each enabled language in the site. You can also set some style options like background color and border radius</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.langBlockLocaleCaption">Text settings for locale: </message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertButton">Text for close button</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertText">Alert text</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertTextInstructions">This will be the text displayed as a cookie alert in each page footer. You can use HTML tag such as: em, strong, a...</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBd">Border radius for the message box text corners</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgwrapper">Background color for the whole alert box. You can use any HTML/CSS color definition, p.e: #ffffff, rgb(255,255,255) or rgba</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgbutton">Background color for the button</message>
 </locale>

@@ -12,19 +12,19 @@
  
 <locale name="ca_ES" full_name="Català">
 
-	<!-- Google Analytics -->
-	<message key="plugins.generic.cookiesAlert.displayName"></message>
-	<message key="plugins.generic.cookiesAlert.description"><![CDATA[]]></message>
+	<!-- Cookies Alert -->
+	<message key="plugins.generic.cookiesAlert.displayName">Avís de cookies</message>
+	<message key="plugins.generic.cookiesAlert.description"><![CDATA[Usa aquest connector per mostrar un avís als visitants del site sobre l'úss de cookies. Pluguin dissenyat per complir amb la legislació espanyola al respecte. Text d'avís, d'acceptació i paràmetres d'estil configurables]]></message>
 
-	<!-- Google Analytics Settings Management -->
+	<!-- Cookies Alert Settings Management -->
 	<message key="plugins.generic.cookiesAlert.manager.settings">Configuració</message>
-  <message key="plugins.generic.cookiesAlert.manager.cookiesAlertSettings"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.description"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.langBlockLocaleCaption"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertButton"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertText"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertTextInstructions"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBd"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgwrapper"></message>
-  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgbutton"></message>
+  <message key="plugins.generic.cookiesAlert.manager.cookiesAlertSettings">Pàgina de configuració de l'Avís de cookies</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.description">Introdueix el text a mostrar a l'alerta i en el botó de tancar. El text ha d'introduir-se per cada idioma habilitat al site. També pots configurar algunes opcions d'estil com el color de fons i la vora arrodonida</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.langBlockLocaleCaption">Configuració del text per al locale: </message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertButton">Text pel botó de tancar</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertText">Text de l'alerta</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertTextInstructions">Aquest serà el text mostrat com a Avís de cookie al peu de totes les pàgines. Pots usar etiquetes HTML com: em, strong, a...</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBd">Vora arrodonida (border-radius) per a les cantonades de la caixa d'avís</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgwrapper">Color de fons per a la caixa d'avís. Pots usar qualsevol definició HTML/CSS, o rgba p.e: #ffffff, rgb(255,255,255)</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgbutton">Color de fons per al botó</message>
 </locale> 
