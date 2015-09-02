@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/cookiesAlert/locale/it_IT/locale.xml
+  *
+  * Copyright (c) 2014 UOC, Universitat Oberta de Catalunya
+  * Developed by Julià Mestieri (Journal Services - http://journal-services.com)
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Cookies Alert plugin localization strings for the it_IT (Italian) locale.
+  *
+  * Translation contributed by Piero Grandesso
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+
+	<message key="plugins.generic.cookiesAlert.displayName">Cookies Alert</message>
+	<message key="plugins.generic.cookiesAlert.description">Messaggio di avviso sui Cookies, testo e stile personalizzabili</message>
+
+	<message key="plugins.generic.cookiesAlert.manager.settings">Impostazioni</message>
+  <message key="plugins.generic.cookiesAlert.manager.cookiesAlertSettings">Pagina di configurazione del Cookies Alert</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.description">Inserisci il testo da visualizzare nell'avviso e nel bottone di chiusura. Il testo deve essere inserito per ciascuna lingua abilitata nel sito. Si possono anche impostare alcune opzioni di stile come il colore di sfondo e l'arrotondamento degli angoli</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.langBlockLocaleCaption">Testi per la lingua:</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertButton">Testo per il bottone di chiusura</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertText">Testo di avviso</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertTextInstructions">Questo testo sarà visualizzato come un "avviso cookies" in ciascuna pagina nel footer. È possibile usare tag HTML come: em, strong, a...</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBd">Smussatura per gli angoli del box di avviso</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgwrapper">Colore di sfondo per l'intero box di avviso. Si può usare ogni definizione del colore HTML/CSS, es: #ffffff, rgb(255,255,255) o rgba</message>
+  <message key="plugins.generic.cookiesAlert.manager.settings.cookiesAlertStyleBgbutton">Colore di sfondo per il bottone</message>
+</locale>
